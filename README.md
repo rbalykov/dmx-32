@@ -1,6 +1,7 @@
 # dmx-multiverse
 
 Project goal: upgrade *de-facto* dmx-512 use-case over show industry.
+
 Project profit: extracting more bandwidth from ready-made tonns of hadware (consoles, dongles, cable, fixtures).
 
 Physycal layer circuitry uses *MAX 485-like* ICs. 
