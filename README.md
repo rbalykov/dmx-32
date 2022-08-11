@@ -1,10 +1,8 @@
 # Project: dmx-multiverse
+#### The goal: upgrade *de-facto* dmx-512 use-case over show industry.
+#### The profit: extracting more bandwidth from ready-made tonns of hadware (consoles, dongles, cable, fixtures).
 
-## The goal: upgrade *de-facto* dmx-512 use-case over show industry.
-
-## The profit: extracting more bandwidth from ready-made tonns of hadware (consoles, dongles, cable, fixtures).
-
-## Physycal layer 
+## Physical layer 
 
 Over the world, circuitry uses *MAX 485-like* ICs. 
 1) The *slope-limited* 485 ICs are bound to DMX's 250 kbaud, thus allowing to forget many headaches using *ugly cheap almost-broken* cables.
@@ -20,5 +18,17 @@ Over the world, circuitry uses *MAX 485-like* ICs.
 
 ## Refactors
 ### Baudrate, framing, startcode magic
+#### Microphone-type cable rates 250kHz 500k 1MHz 2M 4M 8M 
+#### Twisted pair rates 16M 32M 64M 128M 256M 512M 1G
+250kHz uses starcode 0x00, as before
+
+DMX-512 at multiple speed mode uses startcode 0x00 once per 250kHz-timed frame, the rest frames use SC *not equal to 0x00*
+
 ### RS-422, closed-loop topology
+5-pin cable goes true 5-wired as default, allowing to replace RS-485 half-duplex with RS-422 full-duplex.
+Having full-duplex line, system is capable for *closed-loop* topology, giving tight mechanic control over DMX hardware you already have (you still need new 5-pin RS-422 DMX splitter)
+
 ### Checksum and parity checks
+You know, this story is about kilometer-long cables again.
+
+Checking framing integrity is nice add-on for that story.
