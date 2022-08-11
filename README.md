@@ -19,4 +19,6 @@ Over the world, circuitry uses *MAX 485-like* ICs.
 3) Quad/Octa megabaud - even more universes, full-duplex RS-422 topology (not half-duplex RS-485), sure parity checks, frame checksums, closed-loop topology, etc. As a penalty - it can't be an *ugly and cheap* kilometer cable. As a life-hack, 1/3 kilometer roll of *FTP Cat5/6 cable* fits (A) couple os RS-422 lanes (B) quad RS-485 lanes (C) Whatever else, analog or digital, that fits 100-700 MHz range. 
 
 ## Refactors
-### Frame checksuming
+### Baudrate, framing, startcode magic
+### RS-422, closed-loop topology
+### Checksum and parity checks
